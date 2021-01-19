@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnterEmail));
             this.mainPanel = new System.Windows.Forms.Panel();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -41,15 +41,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.transition = new Guna.UI2.WinForms.Guna2Transition();
-            this.verification1 = new Fare_Matrix_CPY.AdminPortal.Verification();
+            this.transition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.verification1);
             this.mainPanel.Controls.Add(this.bunifuFlatButton1);
             this.mainPanel.Controls.Add(this.btnNext);
             this.mainPanel.Controls.Add(this.txtEmail);
@@ -57,7 +55,7 @@
             this.mainPanel.Controls.Add(this.lblInstruction);
             this.mainPanel.Controls.Add(this.lblWatermark);
             this.mainPanel.Controls.Add(this.pictureBox1);
-            this.transition.SetDecoration(this.mainPanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.transition.SetDecoration(this.mainPanel, BunifuAnimatorNS.DecorationType.None);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
@@ -72,7 +70,7 @@
             this.bunifuFlatButton1.BorderRadius = 0;
             this.bunifuFlatButton1.ButtonText = "Back";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.transition.SetDecoration(this.bunifuFlatButton1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.transition.SetDecoration(this.bunifuFlatButton1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.Iconimage = null;
@@ -84,7 +82,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(65, 196);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(65, 205);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Transparent;
@@ -105,7 +103,7 @@
             this.btnNext.BorderRadius = 0;
             this.btnNext.ButtonText = "Next";
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.transition.SetDecoration(this.btnNext, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.transition.SetDecoration(this.btnNext, BunifuAnimatorNS.DecorationType.None);
             this.btnNext.DisabledColor = System.Drawing.Color.Gray;
             this.btnNext.Iconcolor = System.Drawing.Color.Transparent;
             this.btnNext.Iconimage = null;
@@ -117,7 +115,7 @@
             this.btnNext.IconVisible = true;
             this.btnNext.IconZoom = 90D;
             this.btnNext.IsTab = false;
-            this.btnNext.Location = new System.Drawing.Point(380, 196);
+            this.btnNext.Location = new System.Drawing.Point(380, 205);
             this.btnNext.Name = "btnNext";
             this.btnNext.Normalcolor = System.Drawing.Color.Teal;
             this.btnNext.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
@@ -134,7 +132,7 @@
             // txtEmail
             // 
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.transition.SetDecoration(this.txtEmail, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.transition.SetDecoration(this.txtEmail, BunifuAnimatorNS.DecorationType.None);
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtEmail.isPassword = false;
@@ -142,7 +140,7 @@
             this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
             this.txtEmail.LineMouseHoverColor = System.Drawing.Color.CadetBlue;
             this.txtEmail.LineThickness = 2;
-            this.txtEmail.Location = new System.Drawing.Point(81, 144);
+            this.txtEmail.Location = new System.Drawing.Point(81, 153);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(410, 44);
@@ -152,22 +150,22 @@
             // lblHeader
             // 
             this.lblHeader.AutoSize = true;
-            this.transition.SetDecoration(this.lblHeader, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.transition.SetDecoration(this.lblHeader, BunifuAnimatorNS.DecorationType.None);
             this.lblHeader.Font = new System.Drawing.Font("MS Reference Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.Color.Black;
-            this.lblHeader.Location = new System.Drawing.Point(128, 69);
+            this.lblHeader.Location = new System.Drawing.Point(128, 78);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(316, 40);
+            this.lblHeader.Size = new System.Drawing.Size(322, 40);
             this.lblHeader.TabIndex = 11;
-            this.lblHeader.Text = "Enter your email:";
+            this.lblHeader.Text = "Enter your Gmail:";
             // 
             // lblInstruction
             // 
             this.lblInstruction.AutoSize = true;
-            this.transition.SetDecoration(this.lblInstruction, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.transition.SetDecoration(this.lblInstruction, BunifuAnimatorNS.DecorationType.None);
             this.lblInstruction.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInstruction.ForeColor = System.Drawing.Color.Black;
-            this.lblInstruction.Location = new System.Drawing.Point(168, 110);
+            this.lblInstruction.Location = new System.Drawing.Point(168, 119);
             this.lblInstruction.Name = "lblInstruction";
             this.lblInstruction.Size = new System.Drawing.Size(236, 30);
             this.lblInstruction.TabIndex = 16;
@@ -177,7 +175,7 @@
             // lblWatermark
             // 
             this.lblWatermark.AutoSize = true;
-            this.transition.SetDecoration(this.lblWatermark, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.transition.SetDecoration(this.lblWatermark, BunifuAnimatorNS.DecorationType.None);
             this.lblWatermark.Font = new System.Drawing.Font("MS Reference Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWatermark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lblWatermark.Location = new System.Drawing.Point(-9, 215);
@@ -188,7 +186,7 @@
             // 
             // pictureBox1
             // 
-            this.transition.SetDecoration(this.pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.transition.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Image = global::Fare_Matrix_CPY.Properties.Resources.google;
             this.pictureBox1.Location = new System.Drawing.Point(3, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -209,7 +207,7 @@
             // 
             // transition
             // 
-            this.transition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent;
+            this.transition.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.transition.Cursor = null;
             animation3.AnimateOnlyDifferences = true;
             animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
@@ -227,17 +225,7 @@
             animation3.TimeCoeff = 0F;
             animation3.TransparencyCoeff = 1F;
             this.transition.DefaultAnimation = animation3;
-            this.transition.Interval = 3;
-            // 
-            // verification1
-            // 
-            this.verification1.BackColor = System.Drawing.Color.White;
-            this.transition.SetDecoration(this.verification1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.verification1.Location = new System.Drawing.Point(0, 0);
-            this.verification1.Name = "verification1";
-            this.verification1.Size = new System.Drawing.Size(572, 331);
-            this.verification1.TabIndex = 17;
-            this.verification1.Visible = false;
+            this.transition.Interval = 2;
             // 
             // EnterEmail
             // 
@@ -245,7 +233,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.mainPanel);
-            this.transition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.transition.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.Name = "EnterEmail";
             this.Size = new System.Drawing.Size(572, 331);
             this.mainPanel.ResumeLayout(false);
@@ -259,7 +247,6 @@
 
         private System.Windows.Forms.Panel mainPanel;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Guna.UI2.WinForms.Guna2Transition transition;
         private Bunifu.Framework.UI.BunifuFlatButton btnNext;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
         private System.Windows.Forms.Label lblHeader;
@@ -268,6 +255,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private Verification verification1;
+        private BunifuAnimatorNS.BunifuTransition transition;
     }
 }

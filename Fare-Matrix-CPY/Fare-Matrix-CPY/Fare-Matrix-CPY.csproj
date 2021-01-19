@@ -67,6 +67,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -77,6 +78,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="XanderUI">
+      <HintPath>..\..\..\..\Documents\UI Framework\XanderUI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminPortal\CreateAccount.cs">
@@ -96,6 +100,13 @@
     </Compile>
     <Compile Include="AdminPortal\EnterEmail.Designer.cs">
       <DependentUpon>EnterEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPortal\LoginProcessor.cs" />
+    <Compile Include="AdminPortal\SavingAccountPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPortal\SavingAccountPrompt.Designer.cs">
+      <DependentUpon>SavingAccountPrompt.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminPortal\Login.cs">
       <SubType>Form</SubType>
@@ -119,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPortal\EnterEmail.resx">
       <DependentUpon>EnterEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPortal\SavingAccountPrompt.resx">
+      <DependentUpon>SavingAccountPrompt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPortal\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -166,6 +180,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>FareMatrixDB.mdf</DependentUpon>
     </Content>
+    <None Include="Icons\account.png" />
     <None Include="Icons\google.png" />
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +194,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FareMatrixLibrary\FareMatrixLibrary.csproj">
+      <Project>{a29d9ad9-fb19-4905-96da-4809660f85fc}</Project>
+      <Name>FareMatrixLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

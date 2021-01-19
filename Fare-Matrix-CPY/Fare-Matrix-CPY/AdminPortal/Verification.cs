@@ -19,13 +19,7 @@ namespace Fare_Matrix_CPY.AdminPortal
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            List<Control> controls = mainPanel.Controls.OfType<Control>().ToList();
-            foreach (Control ctrl in controls)
-            {
-                transition.HideSync(ctrl);
-            }
-            System.Threading.Thread.Sleep(300);
-            transition.ShowSync(createAccountPassword1);
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)

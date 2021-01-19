@@ -43,14 +43,12 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.transition = new Guna.UI2.WinForms.Guna2Transition();
-            this.createAccountPassword1 = new Fare_Matrix_CPY.AdminPortal.CreateAccountPassword();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.createAccountPassword1);
             this.mainPanel.Controls.Add(this.btnBack);
             this.mainPanel.Controls.Add(this.btnVerify);
             this.mainPanel.Controls.Add(this.txtVerificationCode);
@@ -86,7 +84,7 @@
             this.btnBack.IconVisible = true;
             this.btnBack.IconZoom = 90D;
             this.btnBack.IsTab = false;
-            this.btnBack.Location = new System.Drawing.Point(65, 196);
+            this.btnBack.Location = new System.Drawing.Point(65, 205);
             this.btnBack.Name = "btnBack";
             this.btnBack.Normalcolor = System.Drawing.Color.Transparent;
             this.btnBack.OnHovercolor = System.Drawing.Color.Transparent;
@@ -120,7 +118,7 @@
             this.btnVerify.IconVisible = true;
             this.btnVerify.IconZoom = 90D;
             this.btnVerify.IsTab = false;
-            this.btnVerify.Location = new System.Drawing.Point(380, 196);
+            this.btnVerify.Location = new System.Drawing.Point(380, 205);
             this.btnVerify.Name = "btnVerify";
             this.btnVerify.Normalcolor = System.Drawing.Color.Teal;
             this.btnVerify.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
@@ -145,7 +143,7 @@
             this.txtVerificationCode.LineIdleColor = System.Drawing.Color.Gray;
             this.txtVerificationCode.LineMouseHoverColor = System.Drawing.Color.CadetBlue;
             this.txtVerificationCode.LineThickness = 2;
-            this.txtVerificationCode.Location = new System.Drawing.Point(81, 144);
+            this.txtVerificationCode.Location = new System.Drawing.Point(81, 153);
             this.txtVerificationCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtVerificationCode.Name = "txtVerificationCode";
             this.txtVerificationCode.Size = new System.Drawing.Size(410, 44);
@@ -158,7 +156,7 @@
             this.transition.SetDecoration(this.label2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(124, 69);
+            this.label2.Location = new System.Drawing.Point(124, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(325, 40);
             this.label2.TabIndex = 19;
@@ -170,7 +168,7 @@
             this.transition.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(210, 108);
+            this.label1.Location = new System.Drawing.Point(210, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 15);
             this.label1.TabIndex = 24;
@@ -194,7 +192,7 @@
             this.transition.SetDecoration(this.lblUserGmail, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblUserGmail.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserGmail.ForeColor = System.Drawing.Color.Black;
-            this.lblUserGmail.Location = new System.Drawing.Point(91, 125);
+            this.lblUserGmail.Location = new System.Drawing.Point(91, 134);
             this.lblUserGmail.Name = "lblUserGmail";
             this.lblUserGmail.Size = new System.Drawing.Size(390, 17);
             this.lblUserGmail.TabIndex = 25;
@@ -242,17 +240,7 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 1F;
             this.transition.DefaultAnimation = animation1;
-            this.transition.Interval = 3;
-            // 
-            // createAccountPassword1
-            // 
-            this.createAccountPassword1.BackColor = System.Drawing.Color.White;
-            this.transition.SetDecoration(this.createAccountPassword1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.createAccountPassword1.Location = new System.Drawing.Point(0, 0);
-            this.createAccountPassword1.Name = "createAccountPassword1";
-            this.createAccountPassword1.Size = new System.Drawing.Size(572, 331);
-            this.createAccountPassword1.TabIndex = 26;
-            this.createAccountPassword1.Visible = false;
+            this.transition.Interval = 2;
             // 
             // Verification
             // 
@@ -276,7 +264,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnBack;
         private Guna.UI2.WinForms.Guna2Transition transition;
         private Bunifu.Framework.UI.BunifuFlatButton btnVerify;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtVerificationCode;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblWatermark;
@@ -284,6 +271,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private CreateAccountPassword createAccountPassword1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtVerificationCode;
     }
 }

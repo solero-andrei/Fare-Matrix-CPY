@@ -19,14 +19,10 @@ namespace Fare_Matrix_CPY.AdminPortal
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            List<Control> controls = mainPanel.Controls.OfType<Control>().ToList();
-            foreach (Control ctrl in controls)
-            {
-                transition.HideSync(ctrl);
-            }
-            System.Threading.Thread.Sleep(300);
-            transition.ShowSync(verification1);
-
+            //System.Threading.Thread.Sleep(300);
+            //MessageBox.Show("Account created successfully!", "Created", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            SavingAccountPrompt frm = new SavingAccountPrompt();
+            frm.Show();
         }
     }
 }
