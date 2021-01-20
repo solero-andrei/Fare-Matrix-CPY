@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FareMatrixLibrary
 {
-    public class AdmininistratorModel
+    public class AdmininistratorModel : UserModel
     {
 
     }
