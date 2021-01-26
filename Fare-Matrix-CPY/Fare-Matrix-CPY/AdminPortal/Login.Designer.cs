@@ -317,7 +317,6 @@
             this.bunifuCustomLabel12.TabIndex = 13;
             this.bunifuCustomLabel12.Text = "Buendia";
             this.bunifuCustomLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuCustomLabel12.Click += new System.EventHandler(this.bunifuCustomLabel12_Click);
             // 
             // bunifuCustomLabel11
             // 

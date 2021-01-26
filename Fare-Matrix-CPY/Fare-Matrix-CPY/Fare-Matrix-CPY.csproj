@@ -83,23 +83,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPortal\AdminAccount.cs" />
     <Compile Include="AdminPortal\CreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminPortal\CreateAccount.designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminPortal\CreateAccountPassword.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AdminPortal\CreateAccountPassword.Designer.cs">
-      <DependentUpon>CreateAccountPassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminPortal\EnterEmail.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AdminPortal\EnterEmail.Designer.cs">
-      <DependentUpon>EnterEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminPortal\LoginProcessor.cs" />
     <Compile Include="AdminPortal\SavingAccountPrompt.cs">
@@ -114,31 +103,16 @@
     <Compile Include="AdminPortal\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminPortal\Verification.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AdminPortal\Verification.Designer.cs">
-      <DependentUpon>Verification.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminPortal\CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminPortal\CreateAccountPassword.resx">
-      <DependentUpon>CreateAccountPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminPortal\EnterEmail.resx">
-      <DependentUpon>EnterEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPortal\SavingAccountPrompt.resx">
       <DependentUpon>SavingAccountPrompt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPortal\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminPortal\Verification.resx">
-      <DependentUpon>Verification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

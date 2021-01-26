@@ -43,12 +43,12 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 30;
+            this.timer1.Interval = 40;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // loading
             // 
-            this.loading.AnimationSpeed = 8;
+            this.loading.AnimationSpeed = 10;
             this.loading.FilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.loading.FilledColorAlpha = 150;
             this.loading.FilledThickness = 40;

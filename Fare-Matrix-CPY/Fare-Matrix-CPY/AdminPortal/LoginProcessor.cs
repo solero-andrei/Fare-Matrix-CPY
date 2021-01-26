@@ -4,37 +4,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Fare_Matrix_CPY.AdminPortal
 {
     public class LoginProcessor
     {
-        string query = "";
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string Role { get; set; }
 
-        public LoginProcessor(string forquery)
+        public bool Accounts()//Process the account if valid
         {
-            query = forquery;
-        }
+            bool IsValid = false;
+            DataAccess data = new DataAccess { query = $"SELECT * FROM {Role}Account WHERE [Email] = '{Email}' AND [_Password] = '{Password}'" };
 
-        public void Accounts()//Process the account if valid
-        {
-            try
+            if (data.DataRetrieval() == true)
             {
-                DataAccess data = new DataAccess { query = this.query};
-                if (data.DataRetrieval() == true)
-                {
-                    MessageBox.Show("Login Successfully!", "Welcome to MRT Fare Station", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Account not found. Please try again", "Invalid Credentials", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
+                IsValid = true;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                IsValid = false;
             }
+
+            return IsValid;
         }
     }
 }

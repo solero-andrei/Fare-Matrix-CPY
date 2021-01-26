@@ -29,18 +29,24 @@ namespace Fare_Matrix_CPY.Admin_Portal
             signup.ShowDialog();
         }
 
-        private void bunifuCustomLabel12_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LoginProcessor processor = new LoginProcessor(
-                $"SELECT * FROM AdminAccount WHERE [Email] = '{txtEmail.Text}' AND [_Password] = '{txtPassword.Text}'"
-                );
-            processor.Accounts();
-
+            ProcessLogin();
         }
+
+        public void ProcessLogin()
+        {
+            LoginProcessor proccessor = new LoginProcessor { Email = txtEmail.Text, Password = txtPassword.Text, Role = "Admin" };
+            var isValidate = proccessor.Accounts();
+            if (isValidate == true)
+            {
+                MessageBox.Show("Successfully Login. Welcome Admin", "Welcome to MRT Fare Station", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Account is Invalid. Please try again", "Invalid Account", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
     }
 }

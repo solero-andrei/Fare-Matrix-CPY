@@ -36,15 +36,22 @@
             this.lblHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
+            this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.btnBrowse = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pbxUserImage = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtConfirmPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblConfirm = new System.Windows.Forms.Label();
             this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtMiddleName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblMiddleName = new System.Windows.Forms.Label();
@@ -53,14 +60,12 @@
             this.txtLastName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblLastName = new System.Windows.Forms.Label();
             this.transition = new Guna.UI2.WinForms.Guna2Transition();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUserImage)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,8 +115,8 @@
             this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.mainPanel.Controls.Add(this.label2);
             this.mainPanel.Controls.Add(this.label1);
-            this.mainPanel.Controls.Add(this.guna2Button2);
-            this.mainPanel.Controls.Add(this.guna2Button1);
+            this.mainPanel.Controls.Add(this.btnBack);
+            this.mainPanel.Controls.Add(this.btnNext);
             this.mainPanel.Controls.Add(this.btnBrowse);
             this.mainPanel.Controls.Add(this.pbxUserImage);
             this.mainPanel.Controls.Add(this.groupBox2);
@@ -120,8 +125,74 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 64);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(582, 338);
+            this.mainPanel.Size = new System.Drawing.Size(582, 352);
             this.mainPanel.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.transition.SetDecoration(this.label2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(366, 206);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 11);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "(Optional)";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.transition.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(12, 329);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Note: Please input all the require fields.";
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.BorderRadius = 7;
+            this.btnBack.CheckedState.Parent = this.btnBack;
+            this.btnBack.CustomImages.Parent = this.btnBack;
+            this.transition.SetDecoration(this.btnBack, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnBack.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.btnBack.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.HoverState.Parent = this.btnBack;
+            this.btnBack.Location = new System.Drawing.Point(363, 266);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.ShadowDecoration.Enabled = true;
+            this.btnBack.ShadowDecoration.Parent = this.btnBack;
+            this.btnBack.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
+            this.btnBack.Size = new System.Drawing.Size(102, 35);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Back";
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.Transparent;
+            this.btnNext.BorderRadius = 7;
+            this.btnNext.CheckedState.Parent = this.btnNext;
+            this.btnNext.CustomImages.Parent = this.btnNext;
+            this.transition.SetDecoration(this.btnNext, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnNext.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.btnNext.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.HoverState.Parent = this.btnNext;
+            this.btnNext.Location = new System.Drawing.Point(468, 266);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.ShadowDecoration.Enabled = true;
+            this.btnNext.ShadowDecoration.Parent = this.btnNext;
+            this.btnNext.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
+            this.btnNext.Size = new System.Drawing.Size(102, 35);
+            this.btnNext.TabIndex = 6;
+            this.btnNext.Text = "Next";
+            this.btnNext.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // btnBrowse
             // 
@@ -144,7 +215,7 @@
             this.btnBrowse.IconVisible = true;
             this.btnBrowse.IconZoom = 90D;
             this.btnBrowse.IsTab = false;
-            this.btnBrowse.Location = new System.Drawing.Point(418, 196);
+            this.btnBrowse.Location = new System.Drawing.Point(420, 216);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Normalcolor = System.Drawing.Color.White;
             this.btnBrowse.OnHovercolor = System.Drawing.Color.DarkSlateGray;
@@ -156,34 +227,68 @@
             this.btnBrowse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBrowse.Textcolor = System.Drawing.Color.Black;
             this.btnBrowse.TextFont = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // pbxUserImage
             // 
             this.transition.SetDecoration(this.pbxUserImage, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pbxUserImage.Image = global::Fare_Matrix_CPY.Properties.Resources.account;
-            this.pbxUserImage.Location = new System.Drawing.Point(380, 22);
+            this.pbxUserImage.Location = new System.Drawing.Point(363, 17);
             this.pbxUserImage.Name = "pbxUserImage";
-            this.pbxUserImage.Size = new System.Drawing.Size(164, 157);
+            this.pbxUserImage.Size = new System.Drawing.Size(207, 181);
             this.pbxUserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxUserImage.TabIndex = 4;
             this.pbxUserImage.TabStop = false;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtEmail);
+            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtConfirmPassword);
             this.groupBox2.Controls.Add(this.lblConfirm);
             this.groupBox2.Controls.Add(this.txtPassword);
             this.groupBox2.Controls.Add(this.lblPassword);
-            this.groupBox2.Controls.Add(this.txtEmail);
+            this.groupBox2.Controls.Add(this.txtUsername);
             this.groupBox2.Controls.Add(this.lblUsername);
+            this.groupBox2.Controls.Add(this.pictureBox1);
             this.transition.SetDecoration(this.groupBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.groupBox2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 163);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(345, 148);
+            this.groupBox2.Size = new System.Drawing.Size(345, 163);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Account";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.transition.SetDecoration(this.txtEmail, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmail.isPassword = false;
+            this.txtEmail.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtEmail.LineMouseHoverColor = System.Drawing.Color.CadetBlue;
+            this.txtEmail.LineThickness = 2;
+            this.txtEmail.Location = new System.Drawing.Point(130, 53);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(182, 25);
+            this.txtEmail.TabIndex = 58;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.transition.SetDecoration(this.label3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(82, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 16);
+            this.label3.TabIndex = 57;
+            this.label3.Text = "Email:";
             // 
             // txtConfirmPassword
             // 
@@ -196,7 +301,7 @@
             this.txtConfirmPassword.LineIdleColor = System.Drawing.Color.Gray;
             this.txtConfirmPassword.LineMouseHoverColor = System.Drawing.Color.CadetBlue;
             this.txtConfirmPassword.LineThickness = 2;
-            this.txtConfirmPassword.Location = new System.Drawing.Point(130, 92);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(130, 117);
             this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(182, 25);
@@ -209,7 +314,7 @@
             this.transition.SetDecoration(this.lblConfirm, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblConfirm.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirm.ForeColor = System.Drawing.Color.Black;
-            this.lblConfirm.Location = new System.Drawing.Point(13, 97);
+            this.lblConfirm.Location = new System.Drawing.Point(13, 120);
             this.lblConfirm.Name = "lblConfirm";
             this.lblConfirm.Size = new System.Drawing.Size(116, 15);
             this.lblConfirm.TabIndex = 55;
@@ -227,7 +332,7 @@
             this.txtPassword.LineIdleColor = System.Drawing.Color.Gray;
             this.txtPassword.LineMouseHoverColor = System.Drawing.Color.CadetBlue;
             this.txtPassword.LineThickness = 2;
-            this.txtPassword.Location = new System.Drawing.Point(130, 59);
+            this.txtPassword.Location = new System.Drawing.Point(130, 85);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(182, 25);
@@ -240,29 +345,29 @@
             this.transition.SetDecoration(this.lblPassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblPassword.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.Black;
-            this.lblPassword.Location = new System.Drawing.Point(53, 66);
+            this.lblPassword.Location = new System.Drawing.Point(53, 90);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(76, 16);
             this.lblPassword.TabIndex = 53;
             this.lblPassword.Text = "Password:";
             // 
-            // txtEmail
+            // txtUsername
             // 
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.transition.SetDecoration(this.txtEmail, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmail.isPassword = false;
-            this.txtEmail.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtEmail.LineMouseHoverColor = System.Drawing.Color.CadetBlue;
-            this.txtEmail.LineThickness = 2;
-            this.txtEmail.Location = new System.Drawing.Point(130, 26);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(182, 25);
-            this.txtEmail.TabIndex = 52;
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.transition.SetDecoration(this.txtUsername, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUsername.isPassword = false;
+            this.txtUsername.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtUsername.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtUsername.LineMouseHoverColor = System.Drawing.Color.CadetBlue;
+            this.txtUsername.LineThickness = 2;
+            this.txtUsername.Location = new System.Drawing.Point(130, 21);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(182, 25);
+            this.txtUsername.TabIndex = 52;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblUsername
             // 
@@ -270,11 +375,22 @@
             this.transition.SetDecoration(this.lblUsername, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblUsername.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.Black;
-            this.lblUsername.Location = new System.Drawing.Point(51, 35);
+            this.lblUsername.Location = new System.Drawing.Point(51, 30);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(78, 16);
             this.lblUsername.TabIndex = 51;
             this.lblUsername.Text = "Username:";
+            // 
+            // pictureBox1
+            // 
+            this.transition.SetDecoration(this.pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pictureBox1.Image = global::Fare_Matrix_CPY.Properties.Resources.google;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 45);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 59;
+            this.pictureBox1.TabStop = false;
             // 
             // groupBox1
             // 
@@ -395,7 +511,7 @@
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
@@ -405,77 +521,18 @@
             this.transition.DefaultAnimation = animation1;
             this.transition.Interval = 2;
             // 
-            // guna2Button1
+            // openFileDialog1
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 7;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.transition.SetDecoration(this.guna2Button1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button1.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.guna2Button1.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(468, 266);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Enabled = true;
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2Button1.Size = new System.Drawing.Size(102, 35);
-            this.guna2Button1.TabIndex = 6;
-            this.guna2Button1.Text = "Next";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 7;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.transition.SetDecoration(this.guna2Button2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button2.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.guna2Button2.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(363, 266);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Enabled = true;
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2Button2.Size = new System.Drawing.Size(102, 35);
-            this.guna2Button2.TabIndex = 7;
-            this.guna2Button2.Text = "Back";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.transition.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(14, 315);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Note: Please input all the require fields.";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.transition.SetDecoration(this.label2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label2.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(378, 182);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 11);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "(Optional)";
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "Jpeg Files(*.jpg)|*.jpg";
+            this.openFileDialog1.Title = "Browse Image";
             // 
             // CreateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(582, 402);
+            this.ClientSize = new System.Drawing.Size(582, 416);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panel1);
             this.transition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -491,6 +548,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxUserImage)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -512,7 +570,7 @@
         private System.Windows.Forms.Label lblConfirm;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;
         private System.Windows.Forms.Label lblPassword;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsername;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.GroupBox groupBox1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtMiddleName;
@@ -521,9 +579,13 @@
         private System.Windows.Forms.Label lblFirstName;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtLastName;
         private System.Windows.Forms.Label lblLastName;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnNext;
+        private Guna.UI2.WinForms.Guna2Button btnBack;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

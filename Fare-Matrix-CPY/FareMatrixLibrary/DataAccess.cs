@@ -16,7 +16,7 @@ namespace FareMatrixLibrary
 
         public string query { get; set; }
 
-        public bool DataRetrieval()//Get all the data from the database
+        public virtual bool DataRetrieval()//Get all the data from the database
         {
             bool IsRetrieve = false;
             connection = new SqlConnection(connectionString);
@@ -32,7 +32,7 @@ namespace FareMatrixLibrary
             return IsRetrieve;
         }
 
-        public void DataExecution()//Executes the query
+        public virtual void DataExecution()//Executes the query
         {
             connection = new SqlConnection(connectionString);
             connection.Open();

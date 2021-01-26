@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fare_Matrix_CPY.Admin_Portal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,17 +35,23 @@ namespace Fare_Matrix_CPY.AdminPortal
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            SavingAccountPrompt save = new SavingAccountPrompt();
+            save.ShowDialog();
+        }
 
-            List<Control> controls = mainPanel.Controls.OfType<Control>().ToList();
-            foreach (var control in controls)
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                transition.HideSync(control);
+                pbxUserImage.Image = Image.FromFile(openFileDialog1.FileName);
             }
+        }
 
-            System.Threading.Thread.Sleep(300);
-            EnterEmail email = new EnterEmail();
-            mainPanel.Controls.Add(email);
-            email.Show();
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Dispose();
+            Login adminLogin = new Login();
+            adminLogin.Show();
         }
     }
 }
