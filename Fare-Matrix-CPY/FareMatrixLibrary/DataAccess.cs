@@ -9,21 +9,22 @@ namespace FareMatrixLibrary
 {
     public class DataAccess
     {
-        string connectionString = Connection.ConnectionString;
-        SqlConnection connection = new SqlConnection();
-        SqlDataReader reader;
-        SqlCommand command = new SqlCommand();
-
+        readonly SqlConnection connection;
+        
         public string query { get; set; }
+
+        public DataAccess()
+        {
+            connection = new SqlConnection(connection.ConnectionString);
+        }
 
         public virtual bool DataRetrieval()//Get all the data from the database
         {
             bool IsRetrieve = false;
-            connection = new SqlConnection(connectionString);
             connection.Open();
-            command = new SqlCommand(query, connection);
-            reader = command.ExecuteReader();
-            if(reader.Read() == true)
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read() == true)
             {
                 IsRetrieve = true;
             }
@@ -34,9 +35,8 @@ namespace FareMatrixLibrary
 
         public virtual void DataExecution()//Executes the query
         {
-            connection = new SqlConnection(connectionString);
             connection.Open();
-            command = new SqlCommand(query, connection);
+            SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();
 
             connection.Close();

@@ -15,7 +15,6 @@ namespace Fare_Matrix_CPY.Admin_Portal
 {
     public partial class Login : Form
     {
-
         public Login()
         {
             InitializeComponent();
