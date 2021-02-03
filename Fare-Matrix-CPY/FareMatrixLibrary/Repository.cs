@@ -17,7 +17,7 @@ namespace FareMatrixLibrary
             {
                 conn.Open();
                 SqlCommand command = new SqlCommand();
-                string query = $"INSERT INTO {tableName} ({attributes})VALUES({values})"; ;
+                string query = $"INSERT INTO {tableName} ({attributes})VALUES({values})";
 
                 command.Connection = conn;
                 command.CommandText = query;
@@ -26,13 +26,29 @@ namespace FareMatrixLibrary
                 conn.Close();
             }
         }
-
-        public void Delete()
+        
+        public bool Get(string query)
         {
-            throw new NotImplementedException();
+            bool hasGet = false;
+            using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand();
+                command.Connection = conn;
+                command.CommandText = query;
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read() == true)
+                {
+                    hasGet = true;
+                }
+                
+                conn.Close();
+            }
+
+            return hasGet;
         }
 
-        public void Get()
+        public void Delete()
         {
             throw new NotImplementedException();
         }

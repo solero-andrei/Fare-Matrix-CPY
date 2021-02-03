@@ -8,10 +8,9 @@ namespace FareMatrixLibrary
 {
     public interface IService
     {
-        void AddUser(string role, string[] attributes, string[] values);
+        void AddUser();
         void RemoveUser();
         void UpdateUser();
-        void GetUserByID();
-
+        void GetUserByAccount(string email, string password);
     }
 }

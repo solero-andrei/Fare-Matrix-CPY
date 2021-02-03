@@ -8,9 +8,10 @@ namespace FareMatrixLibrary
 {
     public interface IRepository
     {
-        void Add(string NameOfTable, string attributes, string values);
+        void Add(string tableName, string attributes, string values);
+        bool Get(string query);
         void Delete();
         void Update();
-        void Get();
+        
     }
 }

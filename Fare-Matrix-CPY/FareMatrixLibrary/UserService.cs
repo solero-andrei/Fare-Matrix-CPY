@@ -6,28 +6,45 @@ using System.Threading.Tasks;
 
 namespace FareMatrixLibrary
 {
-    public class UserService : IService
+    public class UserService
     {
         private readonly Repository repo;
+
+        public string UserInformation { get; set; }
+        public string UserAccount { get; set; }
 
         public UserService()
         {
             repo = new Repository();
         }
 
-        public void AddUser(string role, string[] attributes, string[] values)
+        public void AddUser()
         {
-            string attribute = string.Join(",", attributes);
-            string value = string.Join(",", values);
+            string UserInformationAttribute = "[UsersID], [FirstName], [MiddleName], [LastName], [UsersRole]";
+            string UserAccountAttribute = "AccountID, UsersID, Username, Email, _Password, DateCreated";
 
-            repo.Add(role, attribute, value);
+            repo.Add("Users", UserInformationAttribute, UserInformation);
+            repo.Add("UsersAccount", UserAccountAttribute, UserAccount);
         }
 
-        public void GetUserByID()
+        public bool GetUserByAccount(string email, string password)
         {
-            throw new NotImplementedException();
+            bool IsValidAccount = false;
+            string query = $@"SELECT Users.*, UsersAccount.*, UsersRole.* 
+                            FROM UsersRole INNER JOIN 
+                            (UsersAccount INNER JOIN Users ON UsersAccount.UsersID = Users.UsersID) 
+                            ON UsersRole.RoleID = Users.UsersRole 
+                            WHERE UsersAccount.Email = '{email}' AND Usersaccount._Password = '{password}'";
+            var hasGet = repo.Get(query);
+
+            if (hasGet == true)
+            {
+                IsValidAccount = true;
+            }
+
+            return IsValidAccount;
         }
-        
+
         public void RemoveUser()
         {
             throw new NotImplementedException();
