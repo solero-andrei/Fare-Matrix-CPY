@@ -1,5 +1,4 @@
-﻿using Fare_Matrix_CPY.AdminPortal;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using FareMatrixLibrary;
+using Fare_Matrix_CPY.AdminPortal.Forms;
+using Fare_Matrix_CPY.AdminPortal;
 
 namespace Fare_Matrix_CPY.Admin_Portal
 {
@@ -34,17 +35,27 @@ namespace Fare_Matrix_CPY.Admin_Portal
             var check = login.Account(txtEmail.Text, txtPassword.Text);
             if(check == true)
             {
-                MessageBox.Show("Test");
+                MessageBox.Show("Successfully Login, Welcome Admin", "Login successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Hide();
+                Dashboard admin = new Dashboard();
+                admin.Show();
             }
             else
             {
-                MessageBox.Show("asdasd");
+                MessageBox.Show("Account not found, please try again", "Invalid Account", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void lblLinkForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Opacity = .7;
+            ForgotPassword recover = new ForgotPassword();
+            recover.ShowDialog();
         }
     }
 }

@@ -143,6 +143,7 @@
             this.lblLinkForgot.TabIndex = 4;
             this.lblLinkForgot.TabStop = true;
             this.lblLinkForgot.Text = "Forgot Password?";
+            this.lblLinkForgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLinkForgot_LinkClicked);
             // 
             // btnLogin
             // 

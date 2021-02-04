@@ -5,6 +5,6 @@ C:\Users\SoleroFamily\Desktop\FareMatrixApp\Fare-Matrix-CPY\FareMatrixLibrary\ob
 C:\Users\SoleroFamily\Desktop\FareMatrixApp\Fare-Matrix-CPY\FareMatrixLibrary\obj\Debug\FareMatrixLibrary.pdb
 C:\Users\SoleroFamily\Desktop\FareApp\Fare-Matrix-CPY\FareMatrixLibrary\bin\Debug\FareMatrixLibrary.dll
 C:\Users\SoleroFamily\Desktop\FareApp\Fare-Matrix-CPY\FareMatrixLibrary\bin\Debug\FareMatrixLibrary.pdb
-C:\Users\SoleroFamily\Desktop\FareApp\Fare-Matrix-CPY\FareMatrixLibrary\obj\Debug\FareMatrixLibrary.csprojResolveAssemblyReference.cache
 C:\Users\SoleroFamily\Desktop\FareApp\Fare-Matrix-CPY\FareMatrixLibrary\obj\Debug\FareMatrixLibrary.dll
 C:\Users\SoleroFamily\Desktop\FareApp\Fare-Matrix-CPY\FareMatrixLibrary\obj\Debug\FareMatrixLibrary.pdb
+C:\Users\SoleroFamily\Desktop\FareApp\Fare-Matrix-CPY\FareMatrixLibrary\obj\Debug\FareMatrixLibrary.csprojResolveAssemblyReference.cache

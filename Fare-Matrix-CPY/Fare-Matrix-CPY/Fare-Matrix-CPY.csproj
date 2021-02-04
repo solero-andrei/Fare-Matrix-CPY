@@ -84,6 +84,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminPortal\Class\AdminAccount.cs" />
+    <Compile Include="AdminPortal\Forms\ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPortal\Forms\ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPortal\Forms\CreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     <Compile Include="AdminPortal\Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminPortal\Forms\RecoveryCode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminPortal\Forms\RecoveryCode.Designer.cs">
+      <DependentUpon>RecoveryCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPortal\Forms\SavingAccountPrompt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,13 +123,29 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminPortal\Class\ValidateSave.cs" />
+    <Compile Include="AdminPortal\Forms\NewPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminPortal\Forms\NewPassword.Designer.cs">
+      <DependentUpon>NewPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPortal\Class\Recovery.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminPortal\Forms\ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPortal\Forms\CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPortal\Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPortal\Forms\NewPassword.resx">
+      <DependentUpon>NewPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPortal\Forms\RecoveryCode.resx">
+      <DependentUpon>RecoveryCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPortal\Forms\SavingAccountPrompt.resx">
       <DependentUpon>SavingAccountPrompt.cs</DependentUpon>

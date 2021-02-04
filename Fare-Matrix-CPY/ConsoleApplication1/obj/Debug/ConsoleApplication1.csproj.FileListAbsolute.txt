@@ -1,0 +1,6 @@
+C:\Users\SoleroFamily\Desktop\FareApp\Fare-Matrix-CPY\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\SoleroFamily\Desktop\FareApp\Fare-Matrix-CPY\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\SoleroFamily\Desktop\FareApp\Fare-Matrix-CPY\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\SoleroFamily\Desktop\FareApp\Fare-Matrix-CPY\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\SoleroFamily\Desktop\FareApp\Fare-Matrix-CPY\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\SoleroFamily\Desktop\FareApp\Fare-Matrix-CPY\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

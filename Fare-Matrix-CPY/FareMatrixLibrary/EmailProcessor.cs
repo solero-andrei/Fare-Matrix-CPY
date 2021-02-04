@@ -10,16 +10,14 @@ namespace FareMatrixLibrary
 {
     public class EmailProcessor : UserModel
     {
-        public void SendWelcomeMessage()
+        public void Send(string subject, string message)
         {
-            FareAppMailAddress fareappmail = new FareAppMailAddress();
-
             var client = new SmtpClient("smtp.gmail.com", 587)
             {
-                Credentials = new NetworkCredential("soleroandrei0829@gmail.com", "Hindikoalam"),
+                Credentials = new NetworkCredential(FareAppMailAddress.Email, FareAppMailAddress.Password),
                 EnableSsl = true
             };
-            client.Send("soleroandrei0829@gmail.com", Email, "Hello welcome sa amin fare matrix", "Basta naglogin ka sa fare matrix, gawa naming jpg, ay basta, ay ewan.");
+            client.Send(FareAppMailAddress.Email, Email, subject, message);
         }
     }
 }

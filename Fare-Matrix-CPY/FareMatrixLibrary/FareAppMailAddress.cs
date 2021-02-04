@@ -9,12 +9,12 @@ namespace FareMatrixLibrary
     public class FareAppMailAddress
     {
         #region
-        private string _Email = "";
-        private string _Password = "";
+        private static string _Email = "soleroandrei0829@gmail.com";
+        private static string _Password = "Hindikoalam";
         #endregion
         
-        public string Password { get { return _Password; } }
-        public string Email { get { return _Email; } }
+        public static string Password { get { return _Password; } }
+        public static string Email { get { return _Email; } }
 
     }
 }

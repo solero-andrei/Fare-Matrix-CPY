@@ -9,8 +9,8 @@ namespace Fare_Matrix_CPY.AdminPortal
 {
     public class AdminAccount
     {
-        string UserID = IDNumberGenerator.IDInformation();
-        int AccountID = IDNumberGenerator.Account();
+        string UserID = CodeGenerator.IDInformation();
+        int AccountID = CodeGenerator.Account();
 
         public void Save(string userinformation, string useraccount)
         {

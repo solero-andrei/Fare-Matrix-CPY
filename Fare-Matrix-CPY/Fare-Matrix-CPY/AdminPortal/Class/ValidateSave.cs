@@ -79,7 +79,7 @@ namespace Fare_Matrix_CPY.AdminPortal
 
                 admin.Save(information, account);
                 admin.SaveImage(image);
-                adminEmail.SendWelcomeMessage();
+                adminEmail.Send("Hello this is your fare matrix app devel", "Basta naglogin ka sa fare matrix, gawa naming jpg, ay basta, ay ewan.");
 
                 IsValid = true;
             }

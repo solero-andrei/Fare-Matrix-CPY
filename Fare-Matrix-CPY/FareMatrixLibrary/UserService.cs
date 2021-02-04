@@ -20,7 +20,7 @@ namespace FareMatrixLibrary
 
         public void AddUser()
         {
-            string UserInformationAttribute = "[UsersID], [FirstName], [MiddleName], [LastName], [UsersRole]";
+            string UserInformationAttribute = "[UserID], [FirstName], [MiddleName], [LastName], [UsersRole]";
             string UserAccountAttribute = "AccountID, UsersID, Username, Email, _Password, DateCreated";
 
             repo.Add("Users", UserInformationAttribute, UserInformation);
@@ -32,7 +32,7 @@ namespace FareMatrixLibrary
             bool IsValidAccount = false;
             string query = $@"SELECT Users.*, UsersAccount.*, UsersRole.* 
                             FROM UsersRole INNER JOIN 
-                            (UsersAccount INNER JOIN Users ON UsersAccount.UsersID = Users.UsersID) 
+                            (UsersAccount INNER JOIN Users ON UsersAccount.UsersID = Users.UserID) 
                             ON UsersRole.RoleID = Users.UsersRole 
                             WHERE UsersAccount.Email = '{email}' AND Usersaccount._Password = '{password}'";
             var hasGet = repo.Get(query);
