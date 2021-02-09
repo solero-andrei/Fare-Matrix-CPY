@@ -31,19 +31,7 @@ namespace Fare_Matrix_CPY.Admin_Portal
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LoginProcessor login = new LoginProcessor();
-            var check = login.Account(txtEmail.Text, txtPassword.Text);
-            if(check == true)
-            {
-                MessageBox.Show("Successfully Login, Welcome Admin", "Login successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Hide();
-                Dashboard admin = new Dashboard();
-                admin.Show();
-            }
-            else
-            {
-                MessageBox.Show("Account not found, please try again", "Invalid Account", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            LoginAccount();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -57,5 +45,24 @@ namespace Fare_Matrix_CPY.Admin_Portal
             ForgotPassword recover = new ForgotPassword();
             recover.ShowDialog();
         }
+
+        public void LoginAccount()
+        {
+            LoginProcessor login = new LoginProcessor();
+            var check = login.Account(txtEmail.Text, txtPassword.Text);
+            if (check == true)
+            {
+                MessageBox.Show("Successfully Login, Welcome Admin", "Login successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Hide();
+                System.Threading.Thread.Sleep(500);
+                Dashboard admin = new Dashboard();
+                admin.Show();
+            }
+            else
+            {
+                MessageBox.Show("Account not found, please try again", "Invalid Account", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
     }
 }

@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.lblEmail = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtFirstName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtNewPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtConfirmPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblSaving = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,22 +50,22 @@
             this.lblEmail.TabIndex = 21;
             this.lblEmail.Text = "Enter your new password:";
             // 
-            // txtFirstName
+            // txtNewPassword
             // 
-            this.txtFirstName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFirstName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtFirstName.isPassword = false;
-            this.txtFirstName.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtFirstName.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtFirstName.LineMouseHoverColor = System.Drawing.Color.CadetBlue;
-            this.txtFirstName.LineThickness = 3;
-            this.txtFirstName.Location = new System.Drawing.Point(78, 31);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(286, 33);
-            this.txtFirstName.TabIndex = 22;
-            this.txtFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNewPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNewPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNewPassword.isPassword = true;
+            this.txtNewPassword.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtNewPassword.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtNewPassword.LineMouseHoverColor = System.Drawing.Color.CadetBlue;
+            this.txtNewPassword.LineThickness = 3;
+            this.txtNewPassword.Location = new System.Drawing.Point(78, 31);
+            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.Size = new System.Drawing.Size(286, 33);
+            this.txtNewPassword.TabIndex = 22;
+            this.txtNewPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnNext
             // 
@@ -76,7 +77,7 @@
             this.btnNext.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
             this.btnNext.HoverState.Parent = this.btnNext;
-            this.btnNext.Location = new System.Drawing.Point(291, 137);
+            this.btnNext.Location = new System.Drawing.Point(291, 139);
             this.btnNext.Name = "btnNext";
             this.btnNext.ShadowDecoration.Enabled = true;
             this.btnNext.ShadowDecoration.Parent = this.btnNext;
@@ -97,22 +98,22 @@
             this.bunifuCustomLabel1.TabIndex = 25;
             this.bunifuCustomLabel1.Text = "Confirm your new password:";
             // 
-            // bunifuMaterialTextbox1
+            // txtConfirmPassword
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.CadetBlue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(78, 96);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(286, 33);
-            this.bunifuMaterialTextbox1.TabIndex = 26;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtConfirmPassword.isPassword = true;
+            this.txtConfirmPassword.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtConfirmPassword.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtConfirmPassword.LineMouseHoverColor = System.Drawing.Color.CadetBlue;
+            this.txtConfirmPassword.LineThickness = 3;
+            this.txtConfirmPassword.Location = new System.Drawing.Point(78, 96);
+            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.Size = new System.Drawing.Size(286, 33);
+            this.txtConfirmPassword.TabIndex = 26;
+            this.txtConfirmPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -129,17 +130,30 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblSaving);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.bunifuMaterialTextbox1);
+            this.panel1.Controls.Add(this.txtConfirmPassword);
             this.panel1.Controls.Add(this.bunifuCustomLabel1);
             this.panel1.Controls.Add(this.btnNext);
-            this.panel1.Controls.Add(this.txtFirstName);
+            this.panel1.Controls.Add(this.txtNewPassword);
             this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(445, 177);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblSaving
+            // 
+            this.lblSaving.AutoSize = true;
+            this.lblSaving.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaving.Location = new System.Drawing.Point(369, 116);
+            this.lblSaving.Name = "lblSaving";
+            this.lblSaving.Size = new System.Drawing.Size(51, 13);
+            this.lblSaving.TabIndex = 28;
+            this.lblSaving.Text = "Saving...";
+            this.lblSaving.Visible = false;
             // 
             // NewPassword
             // 
@@ -157,11 +171,12 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCustomLabel lblEmail;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtFirstName;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNewPassword;
         private Guna.UI2.WinForms.Guna2Button btnNext;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtConfirmPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblSaving;
     }
 }

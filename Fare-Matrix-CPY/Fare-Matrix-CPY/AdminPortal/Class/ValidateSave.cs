@@ -10,16 +10,15 @@ namespace Fare_Matrix_CPY.AdminPortal
     public class ValidateSave : UserModel
     {
         public string ConfirmPassword { get; set; }
-
         public System.Windows.Forms.PictureBox image { get; set; }
         const int PasswordLength = 8;
 
         private bool RequiredFields()
         {
             bool IsValid;
-            if (Lastname.Equals(string.Empty) && FirstName.Equals(string.Empty) && MiddleName.Equals(string.Empty)
-                && Username.Equals(string.Empty) && Email.Equals(string.Empty) && Password.Equals(string.Empty)
-                && ConfirmPassword.Equals(string.Empty))
+            if (string.IsNullOrWhiteSpace(FirstName) && string.IsNullOrWhiteSpace(MiddleName) && string.IsNullOrWhiteSpace(Lastname)
+                && string.IsNullOrWhiteSpace(Username) && string.IsNullOrWhiteSpace(Email) && string.IsNullOrWhiteSpace(Password)
+                && string.IsNullOrWhiteSpace(ConfirmPassword))
                 IsValid = false;
             else
                 IsValid = true;

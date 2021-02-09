@@ -193,6 +193,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>FareMatrixDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Top.png" />
+    <None Include="Resources\Stations.png" />
+    <None Include="Resources\Right frame.png" />
+    <None Include="Resources\MRT LOGO.png" />
+    <None Include="Resources\Lower frame.png" />
+    <None Include="Resources\Button Icon Light.png" />
     <None Include="Icons\account.png" />
     <None Include="Icons\google.png" />
   </ItemGroup>

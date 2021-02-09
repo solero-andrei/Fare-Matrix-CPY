@@ -27,7 +27,8 @@ namespace Fare_Matrix_CPY.AdminPortal
         private void btnNext_Click(object sender, EventArgs e)
         {
             Recovery recovery = new Recovery();
-            recovery.SendCode(txtRecipient.Text);
+            Recovery.Recipient = txtRecipient.Text;
+            recovery.SendCode();
 
             recoveryCode1.Visible = true;
             recoveryCode1.Show();

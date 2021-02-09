@@ -16,5 +16,11 @@ namespace Fare_Matrix_CPY.AdminPortal.Forms
         {
             InitializeComponent();
         }
+
+        private void tmrClock_Tick(object sender, EventArgs e)
+        {
+            lblClock.Text = DateTime.Now.ToLongDateString();
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }

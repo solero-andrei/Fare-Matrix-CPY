@@ -11,7 +11,7 @@ namespace FareMatrixLibrary
         void Add(string tableName, string attributes, string values);
         bool Get(string query);
         void Delete();
-        void Update();
+        void Update(string tableName, string attributes, string values, string condition);
         
     }
 }

@@ -53,9 +53,20 @@ namespace FareMatrixLibrary
             throw new NotImplementedException();
         }
 
-        public void Update()
+        public void Update(string tableName, string attributes, string values, string condition)
         {
-            throw new NotImplementedException();
+            using(SqlConnection conn = new SqlConnection(Connection.ConnectionString))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand();
+                string query = $"UPDATE {tableName} SET [{attributes}] = ('{values}') {condition}";
+
+                command.Connection = conn;
+                command.CommandText = query;
+
+                command.ExecuteNonQuery();
+                conn.Close();
+            }
         }
     }
 }

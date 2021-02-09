@@ -21,13 +21,17 @@ namespace Fare_Matrix_CPY.AdminPortal.Forms
         {
             var IsValid = Recovery.CheckCode(txtCode.Text);
 
-            if(IsValid == true)
+            if (IsValid == true)
             {
                 newPassword1.Visible = true;
                 newPassword1.Show();
             }
             else
                 MessageBox.Show("Test");
+
+            newPassword1.Visible = true;
+            newPassword1.Show();
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)

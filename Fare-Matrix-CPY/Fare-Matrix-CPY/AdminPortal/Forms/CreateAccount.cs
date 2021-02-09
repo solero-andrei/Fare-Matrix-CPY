@@ -58,6 +58,7 @@ namespace Fare_Matrix_CPY.AdminPortal
             else
             {
                 MessageBox.Show("Error occured while saving your account.\nPlease check all the fields.", "Error saving", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblProcessor.Visible = false;
             }
 
         }

@@ -80,7 +80,7 @@
             this.btnBack.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.HoverState.Parent = this.btnBack;
-            this.btnBack.Location = new System.Drawing.Point(172, 104);
+            this.btnBack.Location = new System.Drawing.Point(172, 107);
             this.btnBack.Name = "btnBack";
             this.btnBack.ShadowDecoration.Enabled = true;
             this.btnBack.ShadowDecoration.Parent = this.btnBack;
@@ -99,7 +99,7 @@
             this.btnNext.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
             this.btnNext.HoverState.Parent = this.btnNext;
-            this.btnNext.Location = new System.Drawing.Point(277, 104);
+            this.btnNext.Location = new System.Drawing.Point(277, 107);
             this.btnNext.Name = "btnNext";
             this.btnNext.ShadowDecoration.Enabled = true;
             this.btnNext.ShadowDecoration.Parent = this.btnNext;
@@ -178,7 +178,7 @@
             // recoveryCode1
             // 
             this.recoveryCode1.BackColor = System.Drawing.Color.White;
-            this.recoveryCode1.Location = new System.Drawing.Point(-3, 0);
+            this.recoveryCode1.Location = new System.Drawing.Point(0, 0);
             this.recoveryCode1.Name = "recoveryCode1";
             this.recoveryCode1.Size = new System.Drawing.Size(445, 177);
             this.recoveryCode1.TabIndex = 21;

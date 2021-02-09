@@ -50,9 +50,9 @@ namespace FareMatrixLibrary
             throw new NotImplementedException();
         }
 
-        public void UpdateUser()
+        public void UpdateUser(string tableName, string attributes, string values, string condition)
         {
-            throw new NotImplementedException();
+            repo.Update(tableName, attributes, values, condition);
         }
 
     }

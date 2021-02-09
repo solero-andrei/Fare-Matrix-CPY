@@ -36,6 +36,7 @@
             this.lblHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.lblProcessor = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtMiddleName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblMiddleName = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.transition = new Guna.UI2.WinForms.Guna2Transition();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblProcessor = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -131,6 +131,18 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(608, 352);
             this.mainPanel.TabIndex = 1;
+            // 
+            // lblProcessor
+            // 
+            this.lblProcessor.AutoSize = true;
+            this.transition.SetDecoration(this.lblProcessor, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblProcessor.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProcessor.Location = new System.Drawing.Point(396, 305);
+            this.lblProcessor.Name = "lblProcessor";
+            this.lblProcessor.Size = new System.Drawing.Size(197, 13);
+            this.lblProcessor.TabIndex = 11;
+            this.lblProcessor.Text = "Processing your account. Please wait...";
+            this.lblProcessor.Visible = false;
             // 
             // groupBox1
             // 
@@ -438,7 +450,7 @@
             this.transition.SetDecoration(this.txtConfirmPassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.txtConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtConfirmPassword.isPassword = false;
+            this.txtConfirmPassword.isPassword = true;
             this.txtConfirmPassword.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtConfirmPassword.LineIdleColor = System.Drawing.Color.Gray;
             this.txtConfirmPassword.LineMouseHoverColor = System.Drawing.Color.CadetBlue;
@@ -470,7 +482,7 @@
             this.transition.SetDecoration(this.txtPassword, Guna.UI2.AnimatorNS.DecorationType.None);
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPassword.isPassword = false;
+            this.txtPassword.isPassword = true;
             this.txtPassword.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtPassword.LineIdleColor = System.Drawing.Color.Gray;
             this.txtPassword.LineMouseHoverColor = System.Drawing.Color.CadetBlue;
@@ -536,18 +548,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // lblProcessor
-            // 
-            this.lblProcessor.AutoSize = true;
-            this.transition.SetDecoration(this.lblProcessor, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblProcessor.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProcessor.Location = new System.Drawing.Point(396, 305);
-            this.lblProcessor.Name = "lblProcessor";
-            this.lblProcessor.Size = new System.Drawing.Size(197, 13);
-            this.lblProcessor.TabIndex = 11;
-            this.lblProcessor.Text = "Processing your account. Please wait...";
-            this.lblProcessor.Visible = false;
             // 
             // CreateAccount
             // 

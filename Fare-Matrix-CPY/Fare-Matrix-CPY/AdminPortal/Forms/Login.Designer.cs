@@ -33,6 +33,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.topPanel = new System.Windows.Forms.Panel();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnGoogle = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblSignUp = new System.Windows.Forms.Label();
@@ -59,6 +60,7 @@
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.panel1.SuspendLayout();
@@ -76,6 +78,7 @@
             // 
             // guna2CustomGradientPanel2
             // 
+            this.guna2CustomGradientPanel2.Controls.Add(this.topPanel);
             this.guna2CustomGradientPanel2.Controls.Add(this.btnClose);
             this.guna2CustomGradientPanel2.Controls.Add(this.btnGoogle);
             this.guna2CustomGradientPanel2.Controls.Add(this.lblSignUp);
@@ -91,6 +94,15 @@
             this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(416, 449);
             this.guna2CustomGradientPanel2.TabIndex = 1;
+            // 
+            // topPanel
+            // 
+            this.topPanel.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(416, 10);
+            this.topPanel.TabIndex = 9;
             // 
             // btnClose
             // 
@@ -454,6 +466,13 @@
             this.bunifuCustomLabel1.Text = "MRT FARE\r\nSTATION";
             this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.topPanel;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,5 +525,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel14;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel13;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel16;
+        private System.Windows.Forms.Panel topPanel;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }
