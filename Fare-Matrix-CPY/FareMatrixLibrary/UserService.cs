@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FareMatrixLibrary
 {
-    public class UserService
+    public class UserService : UserModel
     {
         private readonly Repository repo;
 
@@ -30,17 +30,22 @@ namespace FareMatrixLibrary
         public bool GetUserByAccount(string email, string password)
         {
             bool IsValidAccount = false;
-            string query = $@"SELECT Users.*, UsersAccount.*, UsersRole.* 
-                            FROM UsersRole INNER JOIN 
-                            (UsersAccount INNER JOIN Users ON UsersAccount.UsersID = Users.UserID) 
-                            ON UsersRole.RoleID = Users.UsersRole 
-                            WHERE UsersAccount.Email = '{email}' AND Usersaccount._Password = '{password}'";
-            var hasGet = repo.Get(query);
+            string query = "SELECT Users.*, UsersAccount.*, UsersRole.* " + 
+                            "FROM UsersRole INNER JOIN " + 
+                            "(UsersAccount INNER JOIN Users ON UsersAccount.UsersID = Users.UserID) "+ 
+                            "ON UsersRole.RoleID = Users.UsersRole " + 
+                            $"WHERE UsersAccount.Email = '{email}' AND Usersaccount._Password = '{password}'";
+            var hasGet = repo.Get(query);            
 
             if (hasGet == true)
             {
                 IsValidAccount = true;
-            }
+
+                UserID = repo.data[0].ToString();
+                FirstName = repo.data[1].ToString();
+                MiddleName = repo.data[2].ToString();
+                Lastname = repo.data[3].ToString();
+            }            
 
             return IsValidAccount;
         }

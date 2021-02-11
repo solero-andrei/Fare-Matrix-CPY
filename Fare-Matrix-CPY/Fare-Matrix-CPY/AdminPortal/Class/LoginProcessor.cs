@@ -9,13 +9,19 @@ namespace Fare_Matrix_CPY.AdminPortal
 {
     public class LoginProcessor
     {
+        public string Name { get; set; }
+        public string ID { get; private set; }
+
         public bool Account(string username, string password)
         {
             bool IsAccountValid = false;
             UserService service = new UserService();
-            var isvalid = service.GetUserByAccount(username, password);
 
-            if(isvalid == true)
+            var isvalid = service.GetUserByAccount(username, password);
+            ID = service.UserID;
+            Name = $"{service.Lastname}, {service.FirstName} {service.MiddleName}.";
+            
+            if (isvalid == true)
             {
                 IsAccountValid = true;
             }

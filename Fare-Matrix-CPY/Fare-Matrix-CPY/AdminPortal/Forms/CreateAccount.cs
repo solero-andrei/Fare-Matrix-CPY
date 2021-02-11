@@ -20,21 +20,6 @@ namespace Fare_Matrix_CPY.AdminPortal
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void CreateAccount_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void lblConfirm_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
             Task<bool> saving = new Task<bool>(SaveAdminAccount);

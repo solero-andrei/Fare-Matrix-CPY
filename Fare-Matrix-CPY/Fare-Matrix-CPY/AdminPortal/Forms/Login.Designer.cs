@@ -34,8 +34,6 @@
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnGoogle = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblSignUp = new System.Windows.Forms.Label();
             this.lblLinkForgot = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -43,6 +41,9 @@
             this.lblEmail = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblPassword = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnGoogle = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel16 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -60,7 +61,6 @@
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.panel1.SuspendLayout();
@@ -103,36 +103,6 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(416, 10);
             this.topPanel.TabIndex = 9;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Image = global::Fare_Matrix_CPY.Properties.Resources.cancel;
-            this.btnClose.ImageActive = null;
-            this.btnClose.Location = new System.Drawing.Point(377, 13);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 25);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnClose.TabIndex = 8;
-            this.btnClose.TabStop = false;
-            this.btnClose.Zoom = 10;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnGoogle
-            // 
-            this.btnGoogle.CheckedState.Parent = this.btnGoogle;
-            this.btnGoogle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGoogle.HoverState.ImageSize = new System.Drawing.Size(55, 55);
-            this.btnGoogle.HoverState.Parent = this.btnGoogle;
-            this.btnGoogle.Image = global::Fare_Matrix_CPY.Properties.Resources.Google_Logo;
-            this.btnGoogle.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnGoogle.Location = new System.Drawing.Point(181, 389);
-            this.btnGoogle.Name = "btnGoogle";
-            this.btnGoogle.PressedState.Parent = this.btnGoogle;
-            this.btnGoogle.Size = new System.Drawing.Size(56, 43);
-            this.btnGoogle.TabIndex = 7;
-            this.btnGoogle.Click += new System.EventHandler(this.btnGoogle_Click_1);
             // 
             // lblSignUp
             // 
@@ -212,7 +182,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.Gray;
-            this.lblEmail.Location = new System.Drawing.Point(35, 57);
+            this.lblEmail.Location = new System.Drawing.Point(38, 57);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(65, 25);
             this.lblEmail.TabIndex = 0;
@@ -245,6 +215,43 @@
             this.txtEmail.Size = new System.Drawing.Size(337, 44);
             this.txtEmail.TabIndex = 1;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.topPanel;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::Fare_Matrix_CPY.Properties.Resources.cancel;
+            this.btnClose.ImageActive = null;
+            this.btnClose.Location = new System.Drawing.Point(377, 13);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(29, 25);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnClose.TabIndex = 8;
+            this.btnClose.TabStop = false;
+            this.btnClose.Zoom = 10;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnGoogle
+            // 
+            this.btnGoogle.CheckedState.Parent = this.btnGoogle;
+            this.btnGoogle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGoogle.HoverState.ImageSize = new System.Drawing.Size(55, 55);
+            this.btnGoogle.HoverState.Parent = this.btnGoogle;
+            this.btnGoogle.Image = global::Fare_Matrix_CPY.Properties.Resources.Google_Logo;
+            this.btnGoogle.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnGoogle.Location = new System.Drawing.Point(181, 389);
+            this.btnGoogle.Name = "btnGoogle";
+            this.btnGoogle.PressedState.Parent = this.btnGoogle;
+            this.btnGoogle.Size = new System.Drawing.Size(56, 43);
+            this.btnGoogle.TabIndex = 7;
+            this.btnGoogle.Click += new System.EventHandler(this.btnGoogle_Click_1);
             // 
             // panel1
             // 
@@ -465,13 +472,6 @@
             this.bunifuCustomLabel1.TabIndex = 1;
             this.bunifuCustomLabel1.Text = "MRT FARE\r\nSTATION";
             this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.topPanel;
-            this.bunifuDragControl1.Vertical = true;
             // 
             // Login
             // 

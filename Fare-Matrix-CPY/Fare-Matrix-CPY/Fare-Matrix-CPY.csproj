@@ -83,7 +83,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPortal\Class\DataEditor.cs" />
+    <Compile Include="AdminPortal\Forms\EditProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminPortal\Forms\EditProfile.Designer.cs">
+      <DependentUpon>EditProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPortal\Forms\ChangeProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminPortal\Forms\ChangeProfile.Designer.cs">
+      <DependentUpon>ChangeProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPortal\Class\AdminAccount.cs" />
+    <Compile Include="AdminPortal\Forms\DashboardSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminPortal\Forms\DashboardSettings.Designer.cs">
+      <DependentUpon>DashboardSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPortal\Forms\ForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +151,15 @@
     <Compile Include="AdminPortal\Class\Recovery.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminPortal\Forms\EditProfile.resx">
+      <DependentUpon>EditProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPortal\Forms\ChangeProfile.resx">
+      <DependentUpon>ChangeProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPortal\Forms\DashboardSettings.resx">
+      <DependentUpon>DashboardSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPortal\Forms\ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +221,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>FareMatrixDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Action-edit-add-icon.png" />
+    <None Include="Resources\Apps-user-info-icon.png" />
+    <None Include="Resources\account.png" />
     <None Include="Resources\Top.png" />
     <None Include="Resources\Stations.png" />
     <None Include="Resources\Right frame.png" />

@@ -68,7 +68,6 @@ namespace Fare_Matrix_CPY.AdminPortal
             bool IsValid = false;
             AdminAccount admin = new AdminAccount();
             EmailProcessor adminEmail = new EmailProcessor { Email = Email};
-                
 
             if (RequiredFields() == true && PasswordConfirmation() == true && EmailValidation() == true
                 && PasswordValidation() == true)
@@ -78,7 +77,8 @@ namespace Fare_Matrix_CPY.AdminPortal
 
                 admin.Save(information, account);
                 admin.SaveImage(image);
-                adminEmail.Send("Hello this is your fare matrix app devel", "Basta naglogin ka sa fare matrix, gawa naming jpg, ay basta, ay ewan.");
+                adminEmail.Send("Fare Matrix Registration",
+                    "Your account is now verified. You can now safely use the Application.\nYou can use this email to recover your account on our application.\n\n-Fare Matrix Developer");
 
                 IsValid = true;
             }

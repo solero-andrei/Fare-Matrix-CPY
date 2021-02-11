@@ -22,7 +22,6 @@ namespace Fare_Matrix_CPY.AdminPortal
 
             service.AddUser();
         }
-        
 
         public void SaveImage(System.Windows.Forms.PictureBox pb)
         {

@@ -19,7 +19,7 @@ namespace Fare_Matrix_CPY
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashboard());
+            Application.Run(new Login());
 
         }
     }

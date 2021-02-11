@@ -474,7 +474,6 @@
             this.lblConfirm.Size = new System.Drawing.Size(116, 15);
             this.lblConfirm.TabIndex = 6;
             this.lblConfirm.Text = "Confirm Password:";
-            this.lblConfirm.Click += new System.EventHandler(this.lblConfirm_Click);
             // 
             // txtPassword
             // 
@@ -562,7 +561,6 @@
             this.Name = "CreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateAccount";
-            this.Load += new System.EventHandler(this.CreateAccount_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.mainPanel.ResumeLayout(false);

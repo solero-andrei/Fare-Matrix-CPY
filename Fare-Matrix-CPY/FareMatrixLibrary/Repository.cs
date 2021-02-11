@@ -10,6 +10,9 @@ namespace FareMatrixLibrary
 {
     public class Repository: IRepository
     {
+        public SqlDataReader reader;
+        //public string[] data;
+        public string[] data { get; set; }
 
         public void Add(string tableName, string attributes, string values)
         {
@@ -26,22 +29,27 @@ namespace FareMatrixLibrary
                 conn.Close();
             }
         }
-        
+
         public bool Get(string query)
         {
             bool hasGet = false;
+            UserModel user = new UserModel();
             using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))
             {
                 conn.Open();
                 SqlCommand command = new SqlCommand();
                 command.Connection = conn;
                 command.CommandText = query;
-                SqlDataReader reader = command.ExecuteReader();
+                reader = command.ExecuteReader();
                 if (reader.Read() == true)
                 {
                     hasGet = true;
+                    data = new string[reader.VisibleFieldCount];
+                    data[0] = reader["UserID"].ToString();
+                    data[1] = reader["FirstName"].ToString();
+                    data[2] = reader["MiddleName"].ToString();
+                    data[3] = reader["LastName"].ToString();
                 }
-                
                 conn.Close();
             }
 

@@ -12,6 +12,7 @@ using FareMatrixLibrary;
 using Fare_Matrix_CPY.AdminPortal.Forms;
 using Fare_Matrix_CPY.AdminPortal;
 
+
 namespace Fare_Matrix_CPY.Admin_Portal
 {
     public partial class Login : Form
@@ -55,7 +56,7 @@ namespace Fare_Matrix_CPY.Admin_Portal
                 MessageBox.Show("Successfully Login, Welcome Admin", "Login successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Hide();
                 System.Threading.Thread.Sleep(500);
-                Dashboard admin = new Dashboard();
+                Dashboard admin = new Dashboard(login.Name, login.ID);
                 admin.Show();
             }
             else
