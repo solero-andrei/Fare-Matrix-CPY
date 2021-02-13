@@ -1,4 +1,5 @@
-﻿using Fare_Matrix_CPY.AdminPortal.Forms;
+﻿using Fare_Matrix_CPY.Admin_Portal;
+using Fare_Matrix_CPY.AdminPortal.Forms;
 using FareMatrixLibrary;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,14 @@ namespace Fare_Matrix_CPY.AdminPortal
 {
     public partial class ForgotPassword : Form
     {
-        public ForgotPassword()
+
+        private Login login;
+
+        public ForgotPassword(Login frm)
         {
             InitializeComponent();
+
+            login = frm;
         }
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
@@ -34,7 +40,10 @@ namespace Fare_Matrix_CPY.AdminPortal
             recoveryCode1.Show();
         }
 
-        
-
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            login.Opacity = 1;
+            Dispose();
+        }
     }
 }

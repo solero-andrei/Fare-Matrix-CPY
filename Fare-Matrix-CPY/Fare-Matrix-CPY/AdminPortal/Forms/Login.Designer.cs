@@ -34,6 +34,8 @@
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnGoogle = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblSignUp = new System.Windows.Forms.Label();
             this.lblLinkForgot = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -42,8 +44,6 @@
             this.lblPassword = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnGoogle = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel16 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -103,6 +103,36 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(416, 10);
             this.topPanel.TabIndex = 9;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::Fare_Matrix_CPY.Properties.Resources.cancel;
+            this.btnClose.ImageActive = null;
+            this.btnClose.Location = new System.Drawing.Point(377, 13);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(29, 25);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnClose.TabIndex = 8;
+            this.btnClose.TabStop = false;
+            this.btnClose.Zoom = 10;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnGoogle
+            // 
+            this.btnGoogle.CheckedState.Parent = this.btnGoogle;
+            this.btnGoogle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGoogle.HoverState.ImageSize = new System.Drawing.Size(55, 55);
+            this.btnGoogle.HoverState.Parent = this.btnGoogle;
+            this.btnGoogle.Image = global::Fare_Matrix_CPY.Properties.Resources.Google_Logo;
+            this.btnGoogle.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnGoogle.Location = new System.Drawing.Point(181, 389);
+            this.btnGoogle.Name = "btnGoogle";
+            this.btnGoogle.PressedState.Parent = this.btnGoogle;
+            this.btnGoogle.Size = new System.Drawing.Size(56, 43);
+            this.btnGoogle.TabIndex = 7;
+            this.btnGoogle.Click += new System.EventHandler(this.btnGoogle_Click_1);
             // 
             // lblSignUp
             // 
@@ -222,36 +252,6 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.topPanel;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Image = global::Fare_Matrix_CPY.Properties.Resources.cancel;
-            this.btnClose.ImageActive = null;
-            this.btnClose.Location = new System.Drawing.Point(377, 13);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 25);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnClose.TabIndex = 8;
-            this.btnClose.TabStop = false;
-            this.btnClose.Zoom = 10;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnGoogle
-            // 
-            this.btnGoogle.CheckedState.Parent = this.btnGoogle;
-            this.btnGoogle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGoogle.HoverState.ImageSize = new System.Drawing.Size(55, 55);
-            this.btnGoogle.HoverState.Parent = this.btnGoogle;
-            this.btnGoogle.Image = global::Fare_Matrix_CPY.Properties.Resources.Google_Logo;
-            this.btnGoogle.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnGoogle.Location = new System.Drawing.Point(181, 389);
-            this.btnGoogle.Name = "btnGoogle";
-            this.btnGoogle.PressedState.Parent = this.btnGoogle;
-            this.btnGoogle.Size = new System.Drawing.Size(56, 43);
-            this.btnGoogle.TabIndex = 7;
-            this.btnGoogle.Click += new System.EventHandler(this.btnGoogle_Click_1);
             // 
             // panel1
             // 
@@ -483,6 +483,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Portal Login";
             this.guna2CustomGradientPanel2.ResumeLayout(false);

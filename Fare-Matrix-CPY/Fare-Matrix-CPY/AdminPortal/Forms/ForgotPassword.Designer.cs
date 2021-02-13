@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.mainEntryPanel = new System.Windows.Forms.Panel();
-            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.txtRecipient = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblEmail = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblInstruction = new System.Windows.Forms.Label();
             this.lblHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -43,6 +43,7 @@
             this.mainPanel.SuspendLayout();
             this.mainEntryPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -60,7 +61,6 @@
             // mainEntryPanel
             // 
             this.mainEntryPanel.Controls.Add(this.recoveryCode1);
-            this.mainEntryPanel.Controls.Add(this.btnBack);
             this.mainEntryPanel.Controls.Add(this.btnNext);
             this.mainEntryPanel.Controls.Add(this.txtRecipient);
             this.mainEntryPanel.Controls.Add(this.lblEmail);
@@ -69,25 +69,6 @@
             this.mainEntryPanel.Name = "mainEntryPanel";
             this.mainEntryPanel.Size = new System.Drawing.Size(445, 177);
             this.mainEntryPanel.TabIndex = 2;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnBack.BorderRadius = 7;
-            this.btnBack.CheckedState.Parent = this.btnBack;
-            this.btnBack.CustomImages.Parent = this.btnBack;
-            this.btnBack.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBack.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.HoverState.Parent = this.btnBack;
-            this.btnBack.Location = new System.Drawing.Point(172, 107);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.ShadowDecoration.Enabled = true;
-            this.btnBack.ShadowDecoration.Parent = this.btnBack;
-            this.btnBack.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.btnBack.Size = new System.Drawing.Size(102, 35);
-            this.btnBack.TabIndex = 20;
-            this.btnBack.Text = "Back";
             // 
             // btnNext
             // 
@@ -140,6 +121,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.lblInstruction);
             this.panel1.Controls.Add(this.lblHeader);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -147,6 +129,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(445, 64);
             this.panel1.TabIndex = 1;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::Fare_Matrix_CPY.Properties.Resources.cancel;
+            this.btnClose.ImageActive = null;
+            this.btnClose.Location = new System.Drawing.Point(413, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(29, 25);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnClose.TabIndex = 27;
+            this.btnClose.TabStop = false;
+            this.btnClose.Zoom = 10;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblInstruction
             // 
@@ -182,6 +179,7 @@
             this.recoveryCode1.Name = "recoveryCode1";
             this.recoveryCode1.Size = new System.Drawing.Size(445, 177);
             this.recoveryCode1.TabIndex = 21;
+            this.recoveryCode1.Visible = false;
             // 
             // ForgotPassword
             // 
@@ -198,6 +196,7 @@
             this.mainEntryPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,10 +209,10 @@
         private System.Windows.Forms.Label lblInstruction;
         private Bunifu.Framework.UI.BunifuCustomLabel lblHeader;
         private System.Windows.Forms.Panel mainEntryPanel;
-        private Guna.UI2.WinForms.Guna2Button btnBack;
         private Guna.UI2.WinForms.Guna2Button btnNext;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtRecipient;
         private Bunifu.Framework.UI.BunifuCustomLabel lblEmail;
+        private Bunifu.Framework.UI.BunifuImageButton btnClose;
         private Forms.RecoveryCode recoveryCode1;
     }
 }

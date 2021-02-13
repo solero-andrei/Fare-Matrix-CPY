@@ -43,21 +43,22 @@ namespace Fare_Matrix_CPY.Admin_Portal
         private void lblLinkForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Opacity = .7;
-            ForgotPassword recover = new ForgotPassword();
+            ForgotPassword recover = new ForgotPassword(this);
             recover.ShowDialog();
         }
 
         public void LoginAccount()
         {
             LoginProcessor login = new LoginProcessor();
+                                   
             var check = login.Account(txtEmail.Text, txtPassword.Text);
             if (check == true)
             {
                 MessageBox.Show("Successfully Login, Welcome Admin", "Login successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Hide();
+                //Hide();
                 System.Threading.Thread.Sleep(500);
                 Dashboard admin = new Dashboard(login.Name, login.ID);
-                admin.Show();
+                admin.ShowDialog();
             }
             else
             {

@@ -19,6 +19,12 @@ namespace Fare_Matrix_CPY.AdminPortal.Forms
             lblID.Text = ID.ToString();
 
             pbxUserProfile.Image = Image.FromFile($"UserImages\\{ID}.jpg");
+
+        }
+
+        public Dashboard()
+        {
+            InitializeComponent();
         }
 
         private void tmrClock_Tick(object sender, EventArgs e)
@@ -29,11 +35,20 @@ namespace Fare_Matrix_CPY.AdminPortal.Forms
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            DashboardSettings settings = new DashboardSettings();
+            DashboardSettings settings = new DashboardSettings(this);
+
             System.Threading.Thread.Sleep(300);
             bodyPanel.Controls.Add(settings);
             settings.Show();
             settings.BringToFront();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Opacity = .7;
+
+            CardsInformation info = new CardsInformation(this);
+            info.ShowDialog();
         }
     }
 }

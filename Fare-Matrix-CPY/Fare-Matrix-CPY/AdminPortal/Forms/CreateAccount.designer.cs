@@ -540,7 +540,7 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileName = "Browse Profile Photo";
             this.openFileDialog1.Filter = "Jpeg Files(*.jpg)|*.jpg";
             this.openFileDialog1.Title = "Browse Image";
             // 
@@ -561,6 +561,7 @@
             this.Name = "CreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateAccount";
+            this.TopMost = true;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.mainPanel.ResumeLayout(false);

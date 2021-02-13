@@ -32,13 +32,10 @@ namespace Fare_Matrix_CPY.AdminPortal
 
         public void SaveNewPassword(string newPassword)
         {
-            string tableName = "UsersAccount";
-            string attribute = "_Password";
-            string value = newPassword;
-            string condition = $"WHERE [Email] = '{Recipient}'";
+            string attributevalue = $"[_Password] = '{newPassword}'";
 
             UserService service = new UserService();
-            service.UpdateUser(tableName, attribute, value, condition);
+            service.UpdateUser("UsersAccount", attributevalue, $"WHERE [Email] = '{Recipient}'");
 
         }
 

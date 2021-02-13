@@ -9,6 +9,7 @@ namespace FareMatrixLibrary
     public class UserModel
     {
         public string UserID { get; set; }
+        public string AccountID { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string Lastname { get; set; }

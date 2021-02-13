@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtMiddleName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblMiddleName = new System.Windows.Forms.Label();
             this.txtFirstName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -36,6 +37,7 @@
             this.txtLastName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblLastName = new System.Windows.Forms.Label();
             this.account = new System.Windows.Forms.GroupBox();
+            this.showPassword = new System.Windows.Forms.CheckBox();
             this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -45,10 +47,10 @@
             this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.showPassword = new System.Windows.Forms.CheckBox();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblUserID = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.account.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +71,17 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit Information";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(45, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 20);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Update name:";
             // 
             // txtMiddleName
             // 
@@ -172,6 +185,17 @@
             this.account.TabIndex = 11;
             this.account.TabStop = false;
             this.account.Text = "Edit Account";
+            // 
+            // showPassword
+            // 
+            this.showPassword.AutoSize = true;
+            this.showPassword.Location = new System.Drawing.Point(350, 55);
+            this.showPassword.Name = "showPassword";
+            this.showPassword.Size = new System.Drawing.Size(55, 19);
+            this.showPassword.TabIndex = 62;
+            this.showPassword.Text = "show";
+            this.showPassword.UseVisualStyleBackColor = true;
+            this.showPassword.CheckedChanged += new System.EventHandler(this.showPassword_CheckedChanged);
             // 
             // txtUsername
             // 
@@ -295,7 +319,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.HoverState.Parent = this.btnUpdate;
-            this.btnUpdate.Location = new System.Drawing.Point(433, 477);
+            this.btnUpdate.Location = new System.Drawing.Point(446, 498);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.ShadowDecoration.Enabled = true;
             this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
@@ -303,17 +327,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(102, 35);
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "Update";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(45, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 20);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Update name:";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCancel
             // 
@@ -325,7 +339,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.HoverState.Parent = this.btnCancel;
-            this.btnCancel.Location = new System.Drawing.Point(325, 477);
+            this.btnCancel.Location = new System.Drawing.Point(338, 498);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.ShadowDecoration.Enabled = true;
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
@@ -340,28 +354,39 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(137, 515);
+            this.label2.Location = new System.Drawing.Point(150, 536);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(304, 13);
             this.label2.TabIndex = 15;
             this.label2.Text = "Note: Fields with value are the only data that will be updated.";
             // 
-            // showPassword
+            // lblID
             // 
-            this.showPassword.AutoSize = true;
-            this.showPassword.Location = new System.Drawing.Point(350, 55);
-            this.showPassword.Name = "showPassword";
-            this.showPassword.Size = new System.Drawing.Size(55, 19);
-            this.showPassword.TabIndex = 62;
-            this.showPassword.Text = "show";
-            this.showPassword.UseVisualStyleBackColor = true;
-            this.showPassword.CheckedChanged += new System.EventHandler(this.showPassword_CheckedChanged);
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(149, 474);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(51, 15);
+            this.lblID.TabIndex = 16;
+            this.lblID.Text = "User ID: ";
+            // 
+            // lblUserID
+            // 
+            this.lblUserID.AutoSize = true;
+            this.lblUserID.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID.Location = new System.Drawing.Point(196, 474);
+            this.lblUserID.Name = "lblUserID";
+            this.lblUserID.Size = new System.Drawing.Size(11, 15);
+            this.lblUserID.TabIndex = 17;
+            this.lblUserID.Text = "-";
             // 
             // EditProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lblUserID);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
@@ -402,5 +427,7 @@
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox showPassword;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblUserID;
     }
 }

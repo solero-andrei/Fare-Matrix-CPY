@@ -83,6 +83,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPortal\Forms\CardsInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPortal\Forms\CardsInformation.Designer.cs">
+      <DependentUpon>CardsInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPortal\Class\DataEditor.cs" />
     <Compile Include="AdminPortal\Forms\EditProfile.cs">
       <SubType>UserControl</SubType>
@@ -149,8 +155,12 @@
       <DependentUpon>NewPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminPortal\Class\Recovery.cs" />
+    <Compile Include="AdminPortal\Class\LoadProfile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminPortal\Forms\CardsInformation.resx">
+      <DependentUpon>CardsInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPortal\Forms\EditProfile.resx">
       <DependentUpon>EditProfile.cs</DependentUpon>
     </EmbeddedResource>

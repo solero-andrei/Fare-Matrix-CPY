@@ -38,8 +38,6 @@ namespace Fare_Matrix_CPY.AdminPortal
             {
                 MessageBox.Show("Password and confirm password is unmatch.\nPlease try again", "Invalid password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-
         }
 
         public bool SavePassword()

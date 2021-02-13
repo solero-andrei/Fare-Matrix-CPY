@@ -29,20 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangeProfile));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bodyPanel = new System.Windows.Forms.Panel();
+            this.lnkUpdatePhoto = new System.Windows.Forms.LinkLabel();
+            this.lblUserID = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnEditProfilePhoto = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnDeactivate = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEditProfile = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pbxProfilePicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblAccountID = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.bodyPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditProfilePhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -51,21 +55,27 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileName = "Browse Profile Image";
             this.openFileDialog1.Filter = "Jpeg Files(*.jpg)|*.jpg|Png Files(*.png)|*.png";
             // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // bodyPanel
             // 
+            this.bodyPanel.Controls.Add(this.lblAccountID);
+            this.bodyPanel.Controls.Add(this.label4);
+            this.bodyPanel.Controls.Add(this.lnkUpdatePhoto);
+            this.bodyPanel.Controls.Add(this.lblUserID);
+            this.bodyPanel.Controls.Add(this.label7);
             this.bodyPanel.Controls.Add(this.btnEditProfilePhoto);
             this.bodyPanel.Controls.Add(this.btnClose);
             this.bodyPanel.Controls.Add(this.btnDeactivate);
-            this.bodyPanel.Controls.Add(this.label4);
+            this.bodyPanel.Controls.Add(this.lblEmail);
             this.bodyPanel.Controls.Add(this.label5);
-            this.bodyPanel.Controls.Add(this.label3);
+            this.bodyPanel.Controls.Add(this.lblUsername);
             this.bodyPanel.Controls.Add(this.label2);
             this.bodyPanel.Controls.Add(this.label1);
             this.bodyPanel.Controls.Add(this.btnEditProfile);
@@ -75,6 +85,38 @@
             this.bodyPanel.Name = "bodyPanel";
             this.bodyPanel.Size = new System.Drawing.Size(715, 636);
             this.bodyPanel.TabIndex = 0;
+            // 
+            // lnkUpdatePhoto
+            // 
+            this.lnkUpdatePhoto.AutoSize = true;
+            this.lnkUpdatePhoto.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkUpdatePhoto.Location = new System.Drawing.Point(435, 276);
+            this.lnkUpdatePhoto.Name = "lnkUpdatePhoto";
+            this.lnkUpdatePhoto.Size = new System.Drawing.Size(72, 15);
+            this.lnkUpdatePhoto.TabIndex = 28;
+            this.lnkUpdatePhoto.TabStop = true;
+            this.lnkUpdatePhoto.Text = "Save Photo";
+            this.lnkUpdatePhoto.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkUpdatePhoto_LinkClicked);
+            // 
+            // lblUserID
+            // 
+            this.lblUserID.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID.Location = new System.Drawing.Point(176, 310);
+            this.lblUserID.Name = "lblUserID";
+            this.lblUserID.Size = new System.Drawing.Size(363, 15);
+            this.lblUserID.TabIndex = 27;
+            this.lblUserID.Text = "--";
+            this.lblUserID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(326, 294);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 16);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "User ID:";
             // 
             // btnEditProfilePhoto
             // 
@@ -89,6 +131,7 @@
             this.btnEditProfilePhoto.TabIndex = 24;
             this.btnEditProfilePhoto.TabStop = false;
             this.btnEditProfilePhoto.Zoom = 10;
+            this.btnEditProfilePhoto.Click += new System.EventHandler(this.btnEditProfilePhoto_Click);
             // 
             // btnClose
             // 
@@ -103,6 +146,7 @@
             this.btnClose.TabIndex = 25;
             this.btnClose.TabStop = false;
             this.btnClose.Zoom = 10;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
             // btnDeactivate
             // 
@@ -123,7 +167,7 @@
             this.btnDeactivate.IconVisible = true;
             this.btnDeactivate.IconZoom = 90D;
             this.btnDeactivate.IsTab = false;
-            this.btnDeactivate.Location = new System.Drawing.Point(244, 446);
+            this.btnDeactivate.Location = new System.Drawing.Point(244, 513);
             this.btnDeactivate.Name = "btnDeactivate";
             this.btnDeactivate.Normalcolor = System.Drawing.Color.Teal;
             this.btnDeactivate.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
@@ -135,42 +179,43 @@
             this.btnDeactivate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDeactivate.Textcolor = System.Drawing.Color.White;
             this.btnDeactivate.TextFont = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeactivate.Click += new System.EventHandler(this.btnDeactivate_Click_1);
             // 
-            // label4
+            // lblEmail
             // 
-            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(176, 358);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(363, 16);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "soleroandrei0829@gmail.com";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEmail.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(176, 426);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(363, 16);
+            this.lblEmail.TabIndex = 22;
+            this.lblEmail.Text = "--";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(334, 338);
+            this.label5.Location = new System.Drawing.Point(334, 410);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 16);
             this.label5.TabIndex = 21;
             this.label5.Text = "Email:";
             // 
-            // label3
+            // lblUsername
             // 
-            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(176, 314);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(363, 15);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "solero-andrei";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUsername.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(176, 383);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(363, 15);
+            this.lblUsername.TabIndex = 20;
+            this.lblUsername.Text = "--";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(318, 292);
+            this.label2.Location = new System.Drawing.Point(318, 367);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 19;
@@ -205,7 +250,7 @@
             this.btnEditProfile.IconVisible = true;
             this.btnEditProfile.IconZoom = 90D;
             this.btnEditProfile.IsTab = false;
-            this.btnEditProfile.Location = new System.Drawing.Point(244, 390);
+            this.btnEditProfile.Location = new System.Drawing.Point(244, 457);
             this.btnEditProfile.Name = "btnEditProfile";
             this.btnEditProfile.Normalcolor = System.Drawing.Color.Teal;
             this.btnEditProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
@@ -221,7 +266,7 @@
             // 
             // pbxProfilePicture
             // 
-            this.pbxProfilePicture.Image = ((System.Drawing.Image)(resources.GetObject("pbxProfilePicture.Image")));
+            this.pbxProfilePicture.Image = global::Fare_Matrix_CPY.Properties.Resources.account;
             this.pbxProfilePicture.Location = new System.Drawing.Point(286, 158);
             this.pbxProfilePicture.Name = "pbxProfilePicture";
             this.pbxProfilePicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -230,6 +275,26 @@
             this.pbxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxProfilePicture.TabIndex = 16;
             this.pbxProfilePicture.TabStop = false;
+            // 
+            // lblAccountID
+            // 
+            this.lblAccountID.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccountID.Location = new System.Drawing.Point(176, 346);
+            this.lblAccountID.Name = "lblAccountID";
+            this.lblAccountID.Size = new System.Drawing.Size(363, 15);
+            this.lblAccountID.TabIndex = 30;
+            this.lblAccountID.Text = "--";
+            this.lblAccountID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(313, 330);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 16);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Account ID:";
             // 
             // ChangeProfile
             // 
@@ -255,12 +320,17 @@
         private Bunifu.Framework.UI.BunifuImageButton btnEditProfilePhoto;
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
         private Bunifu.Framework.UI.BunifuFlatButton btnDeactivate;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton btnEditProfile;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pbxProfilePicture;
+        private System.Windows.Forms.Label lblUserID;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.LinkLabel lnkUpdatePhoto;
+        private System.Windows.Forms.Label lblAccountID;
+        private System.Windows.Forms.Label label4;
     }
 }

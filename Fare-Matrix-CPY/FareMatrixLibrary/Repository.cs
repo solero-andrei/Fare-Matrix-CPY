@@ -11,7 +11,6 @@ namespace FareMatrixLibrary
     public class Repository: IRepository
     {
         public SqlDataReader reader;
-        //public string[] data;
         public string[] data { get; set; }
 
         public void Add(string tableName, string attributes, string values)
@@ -49,6 +48,10 @@ namespace FareMatrixLibrary
                     data[1] = reader["FirstName"].ToString();
                     data[2] = reader["MiddleName"].ToString();
                     data[3] = reader["LastName"].ToString();
+                    data[4] = reader["Email"].ToString();
+                    data[5] = reader["_Password"].ToString();
+                    data[6] = reader["Username"].ToString();
+                    data[7] = reader["AccountID"].ToString();
                 }
                 conn.Close();
             }
@@ -61,13 +64,13 @@ namespace FareMatrixLibrary
             throw new NotImplementedException();
         }
 
-        public void Update(string tableName, string attributes, string values, string condition)
+        public void Update(string tableName, string AttributesAndValues, string condition)
         {
             using(SqlConnection conn = new SqlConnection(Connection.ConnectionString))
             {
                 conn.Open();
                 SqlCommand command = new SqlCommand();
-                string query = $"UPDATE {tableName} SET [{attributes}] = ('{values}') {condition}";
+                string query = $"UPDATE {tableName} SET {AttributesAndValues} {condition}";
 
                 command.Connection = conn;
                 command.CommandText = query;

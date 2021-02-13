@@ -21,7 +21,7 @@ namespace FareMatrixLibrary
         public void AddUser()
         {
             string UserInformationAttribute = "[UserID], [FirstName], [MiddleName], [LastName], [UsersRole]";
-            string UserAccountAttribute = "AccountID, UsersID, Username, Email, _Password, DateCreated";
+            string UserAccountAttribute = "AccountID, UsersID, Username, Email, _Password, DateCreated, Status";
 
             repo.Add("Users", UserInformationAttribute, UserInformation);
             repo.Add("UsersAccount", UserAccountAttribute, UserAccount);
@@ -34,7 +34,7 @@ namespace FareMatrixLibrary
                             "FROM UsersRole INNER JOIN " + 
                             "(UsersAccount INNER JOIN Users ON UsersAccount.UsersID = Users.UserID) "+ 
                             "ON UsersRole.RoleID = Users.UsersRole " + 
-                            $"WHERE UsersAccount.Email = '{email}' AND Usersaccount._Password = '{password}'";
+                            $"WHERE UsersAccount.Email = '{email}' AND Usersaccount._Password = '{password}' AND UsersAccount.Status = 'Active'";
             var hasGet = repo.Get(query);            
 
             if (hasGet == true)
@@ -45,6 +45,10 @@ namespace FareMatrixLibrary
                 FirstName = repo.data[1].ToString();
                 MiddleName = repo.data[2].ToString();
                 Lastname = repo.data[3].ToString();
+                Email = repo.data[4].ToString();
+                Password = repo.data[5].ToString();
+                Username = repo.data[6].ToString();
+                AccountID = repo.data[7].ToString();
             }            
 
             return IsValidAccount;
@@ -55,9 +59,9 @@ namespace FareMatrixLibrary
             throw new NotImplementedException();
         }
 
-        public void UpdateUser(string tableName, string attributes, string values, string condition)
+        public void UpdateUser(string tableName, string attributevalue, string condition)
         {
-            repo.Update(tableName, attributes, values, condition);
+            repo.Update(tableName, attributevalue, condition);
         }
 
     }

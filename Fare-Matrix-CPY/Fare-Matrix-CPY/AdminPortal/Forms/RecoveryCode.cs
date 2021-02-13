@@ -28,10 +28,6 @@ namespace Fare_Matrix_CPY.AdminPortal.Forms
             }
             else
                 MessageBox.Show("Recovery is not match.\nPlease try again", "Invalid Code", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            newPassword1.Visible = true;
-            newPassword1.Show();
-
         }
 
         private void btnBack_Click(object sender, EventArgs e)

@@ -17,6 +17,9 @@ namespace Fare_Matrix_CPY.AdminPortal
             bool IsAccountValid = false;
             UserService service = new UserService();
 
+            LoadProfile.email = username;
+            LoadProfile.password = password;
+
             var isvalid = service.GetUserByAccount(username, password);
             ID = service.UserID;
             Name = $"{service.Lastname}, {service.FirstName} {service.MiddleName}.";

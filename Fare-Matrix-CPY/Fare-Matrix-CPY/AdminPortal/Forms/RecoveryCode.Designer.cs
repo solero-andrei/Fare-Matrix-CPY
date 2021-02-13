@@ -121,6 +121,7 @@
             this.newPassword1.Name = "newPassword1";
             this.newPassword1.Size = new System.Drawing.Size(445, 177);
             this.newPassword1.TabIndex = 26;
+            this.newPassword1.Visible = false;
             // 
             // RecoveryCode
             // 

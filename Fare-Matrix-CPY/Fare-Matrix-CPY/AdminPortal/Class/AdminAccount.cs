@@ -17,7 +17,7 @@ namespace Fare_Matrix_CPY.AdminPortal
             UserService service = new UserService
             {
                 UserInformation = $"'{UserID}', {userinformation}, 1",
-                UserAccount = $"{AccountID}, '{UserID}', {useraccount}, '{DateTime.Today}'"
+                UserAccount = $"{AccountID}, '{UserID}', {useraccount}, '{DateTime.Today}', 'Active'"
             };
 
             service.AddUser();
